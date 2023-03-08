@@ -9,6 +9,7 @@ const router = express.Router()
 
 router.post('/auth/signup', userCtrl.signup)
 router.post('/auth/login', userCtrl.login)
+router.get('/auth/pseudo', userCtrl.readPseudo)
 
 //On exporte notre module router
 module.exports = router
