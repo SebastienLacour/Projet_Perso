@@ -8,6 +8,7 @@ const userCtrl = require('../controllers/user')
 const router = express.Router()
 
 router.post('/auth/signup', userCtrl.signup)
+router.post('/auth/login', userCtrl.login)
 
 //On exporte notre module router
 module.exports = router
