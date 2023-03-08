@@ -14,6 +14,9 @@ const bodyParser = require('body-parser')
 const dotenv = require('dotenv')
 const result = dotenv.config()
 
+//On importe les différentes routes nécéssaires pour le fonctionnement de notre API
+const userRoutes = require('./routes/user.js')
+
 //Création de l'application express
 const app = express()
 
@@ -21,6 +24,7 @@ const app = express()
 app.use(morgan("dev"))
 
 //On utilise body-parser pour pouvoir transformer les corps des requêtes en objet json utilisable en js
+app.use(bodyParser.json())
 
 //Connexion avec la base de donnée de mongoDb
 mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.vtuvewi.mongodb.net/?retryWrites=true&w=majority`)
@@ -35,11 +39,8 @@ app.use((req, res, next) => {
     next();
 });
 
-
-//Route générale de l'application
-app.use((req, res) => {
-    res.json({ message: "le serveur fonctionne"})
-})
+//Routes générales de l'application 
+app.use('/api', userRoutes)
 
 //On exporte le module app
 module.exports = app
