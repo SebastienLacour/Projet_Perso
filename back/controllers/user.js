@@ -9,6 +9,7 @@ const jwt = require('jsonwebtoken')
 
 //On importe dotenv
 const dotenv = require('dotenv')
+const user = require('../models/user')
 
 //Fonction qui gère la création d'un nouveau compte
 exports.signup = (req, res) => {
@@ -85,4 +86,15 @@ exports.login = (req, res) => {
     })
     .catch( error => res.status(500).json({ error }))
 
+}
+
+//Fonction qui gère la récupération du pseudo de l'utilisateur
+exports.readPseudo = (req, res) => {
+    console.log("           PSEUDO          ")
+
+    userModel.findOne({ email: req.body.email })
+    .then( user => {
+        res.status(200).json({ pseudo : user.pseudo })
+    })
+    .catch( error => res.status(404).json({ message: 'pseudo introuvable' }))
 }
