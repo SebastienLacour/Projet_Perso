@@ -8,6 +8,7 @@ exports.createCookbook = (req, res) => {
         name: req.body.name,
         imageUrl: req.body.imageUrl,
         description: req.body.description,
+        type: req.body.type,
         location: req.body.location,
         products: req.body.products,
         havefound: req.body.havefound,

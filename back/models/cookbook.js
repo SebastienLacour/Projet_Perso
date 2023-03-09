@@ -7,6 +7,7 @@ const cookbook = mongoose.Schema({
     name: {type: String, require: true},
     imageUrl: {type: String, require: true},
     description: {type: String, require: true},
+    type: {type: String, require: true},
     location: {type: String, require: true},
     products: {type: Array, require: true},
     havefound: {type: Number, require: true},
