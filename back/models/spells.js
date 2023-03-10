@@ -14,8 +14,8 @@ const spell = mongoose.Schema({
     effect: {type: String, require: true},
     stats: {type: Object, require: true},
     location: {type: String, require: true},
-    havefound: {type: Number, require: true},
-    usersfound: {type: Array, require: true}
+    havefound: {type: Number, default: 0},
+    usersfound: {type: Array,}
 })
 
 //On exporte le schema de donnée spell en tant que modèle

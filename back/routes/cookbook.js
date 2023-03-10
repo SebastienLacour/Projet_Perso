@@ -4,6 +4,9 @@ const express = require('express')
 //On importe les différentes fonctions du controller user
 const cookbooksCtrl = require('../controllers/cookbook')
 
+//On importe le controller pour gérer les utilisaterus ayant trouvé l'item
+const foundCtrl = require('../controllers/found')
+
 //On importe la fonction router d'express pour créer des routes
 const router = express.Router()
 
@@ -13,6 +16,7 @@ router.get("/cookbooks", cookbooksCtrl.readCookbook)
 router.get("/cookbooks/:id", cookbooksCtrl.readOneCookbook)
 router.put("/cookbooks/:id", cookbooksCtrl.updateCookbook)
 router.delete("/cookbooks/:id", cookbooksCtrl.deleteCookbook)
+router.post("/cookbooks/:id/found", foundCtrl.foundCookbook )
 
 
 //On importe la fonction router d'express pour créer des routes

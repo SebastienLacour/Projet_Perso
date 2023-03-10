@@ -10,8 +10,8 @@ const cookbook = mongoose.Schema({
     type: {type: String, require: true},
     location: {type: String, require: true},
     products: {type: Array, require: true},
-    havefound: {type: Number, require: true},
-    usersfound: {type: Array, require: true}
+    havefound: {type: Number, default: 0},
+    usersfound: {type: Array}
 })
 
 //On exporte le schema de donnée cookbook en tant que modèle

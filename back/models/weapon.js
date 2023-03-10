@@ -17,8 +17,8 @@ const weapon = mongoose.Schema({
     weight: {type: Number, require: true},
     upgrade: {type: String, require: true},
     ashes: {type: Boolean, require: true},
-    havefound: {type: Number, require: true},
-    usersfound: {type: Array, require: true}
+    havefound: {type: Number, defaut: 0},
+    usersfound: {type: Array}
 })
 
 //On exporte le modèle pour les armes
