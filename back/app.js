@@ -19,6 +19,7 @@ const userRoutes = require('./routes/user.js')
 const spellsRoutes = require('./routes/spells')
 const cookbookRoutes = require('./routes/cookbook')
 const materialRoutes = require('./routes/material')
+const productRoutes = require('./routes/product')
 
 //Création de l'application express
 const app = express()
@@ -47,6 +48,7 @@ app.use('/api', userRoutes)
 app.use('/api', spellsRoutes)
 app.use('/api', cookbookRoutes)
 app.use('/api', materialRoutes)
+app.use('/api', productRoutes)
 
 //On exporte le module app
 module.exports = app
