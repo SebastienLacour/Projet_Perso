@@ -49,9 +49,13 @@ exports.readOneSpell = (req, res) => {
 //Fonction pour modifié un sort 
 exports.updateSpell = (req, res) => {
 
+    console.log(req.params.id)
+    console.log(req.params.id === req.body._id)
+    console.log(req.body)
+
     //On récupère le sort dont l'id est le même ue celui passé en paramètre de l'URL
     //On modifie celui-ci avec la méthode updateOne
-    spellModel.updateOne({_id: req.body.id, ...req.body})
+    spellModel.updateOne({_id: req.params.id}, {...req.body})
     .then(() => res.status(200).json({ message: "sort modifié", contenu: req.body}))
     .catch( error => res.status(404).json({ error }))
 }
@@ -61,7 +65,7 @@ exports.deleteSpell = (req, res) => {
 
     //On récupère le sort dont l'id est le même ue celui passé en paramètre de l'URL
     //On supprime celui-ci avec la méthode deleteOne
-    spellModel.deleteOne({_id: req.body.id})
+    spellModel.deleteOne({_id: req.body.id}, {...req.body})
     .then(() => res.status(200).json({message: "sort supprimé"}))
     .catch( error => res.status(404).json({error}))
 
