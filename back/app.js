@@ -22,6 +22,7 @@ const materialRoutes = require('./routes/material')
 const productRoutes = require('./routes/product')
 const weaponRoutes = require('./routes/weapon')
 const talismanRoutes = require('./routes/talisman')
+const consummablesRoutes = require('./routes/consumables')
 
 //Création de l'application express
 const app = express()
@@ -53,6 +54,7 @@ app.use('/api', materialRoutes)
 app.use('/api', productRoutes)
 app.use('/api', weaponRoutes)
 app.use('/api', talismanRoutes)
+app.use('/api', consummablesRoutes)
 
 //On exporte le module app
 module.exports = app
