@@ -18,6 +18,7 @@ const result = dotenv.config()
 const userRoutes = require('./routes/user.js')
 const spellsRoutes = require('./routes/spells')
 const cookbookRoutes = require('./routes/cookbook')
+const materialRoutes = require('./routes/material')
 
 //Création de l'application express
 const app = express()
@@ -45,6 +46,7 @@ app.use((req, res, next) => {
 app.use('/api', userRoutes)
 app.use('/api', spellsRoutes)
 app.use('/api', cookbookRoutes)
+app.use('/api', materialRoutes)
 
 //On exporte le module app
 module.exports = app
