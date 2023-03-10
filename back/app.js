@@ -20,6 +20,7 @@ const spellsRoutes = require('./routes/spells')
 const cookbookRoutes = require('./routes/cookbook')
 const materialRoutes = require('./routes/material')
 const productRoutes = require('./routes/product')
+const weaponRoutes = require('./routes/weapon')
 
 //Création de l'application express
 const app = express()
@@ -49,6 +50,7 @@ app.use('/api', spellsRoutes)
 app.use('/api', cookbookRoutes)
 app.use('/api', materialRoutes)
 app.use('/api', productRoutes)
+app.use('/api', weaponRoutes)
 
 //On exporte le module app
 module.exports = app
