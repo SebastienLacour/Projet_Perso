@@ -1,0 +1,9 @@
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    width: $width-input;
+    height: $height-input;
+}
