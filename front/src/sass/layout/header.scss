@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: $color-ternary;
+    color: $color-secondary;
+    text-decoration: none;
+    padding: 30px;
+    &__nav{
+        margin-right: 30px;
+        font-size: $font-size;
+    }
+    &__list{
+        display: flex;
+        list-style-type: none;
+    }
+    &__link{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-right: 1px solid $color-secondary;
+        border-left: 1px solid $color-secondary;
+        font-size: 20px;
+
+    }
+}
