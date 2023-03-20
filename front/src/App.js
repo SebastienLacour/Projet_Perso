@@ -7,6 +7,7 @@ import './style/style.css'
 import FormAuth from "./components/FormAuth";
 import Header from "./components/Header";
 import AuthContext from "./components/context/AuthContext";
+import Footer from "./components/Footer";
 
 //Importation du context
 
@@ -23,6 +24,7 @@ function App() {
     <div className="App">
       <Header isLoggedIn={isLoggedIn}/>
       <FormAuth/>
+      <Footer/>
     </div>
   );
 }

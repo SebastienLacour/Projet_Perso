@@ -18,7 +18,6 @@ export default function Header(props) {
             <li className="header__link">connexion</li>
             <li className="header__link">inscription</li>
           </ul>
-
         }
 
       </nav>

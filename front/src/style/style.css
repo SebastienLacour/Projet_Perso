@@ -60,6 +60,12 @@
   font-size: 20px;
 }
 
+.footer {
+  background-color: #1A1D26;
+  margin-top: 40px;
+  width: 100%;
+}
+
 .auth-form {
   border: solid 2px black;
   border-radius: 20px;
