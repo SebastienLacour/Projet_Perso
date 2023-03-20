@@ -1,0 +1,18 @@
+.modal{
+    width: 600px;
+    height: 400px;
+    background-color: black;
+    border-radius: $radius;
+    position: fixed;
+    text-align: center;
+    &__head{
+        background-color: red;
+        height: 60px;
+        border-top-right-radius: $radius;
+        border-top-left-radius: $radius;
+
+    }
+    &__body{
+
+    }
+}

@@ -10,7 +10,7 @@ export default function Input(props) {
     return (
         <div className= {divClassName}>
             <label htmlFor={label} className={labelClassName}>{label}</label>
-            <input type={label} name={label} id={id} className='input' />
+            <input type={label} name={label} id={id} ref={props.ref} className='input' />
         </div>
     )
 }

@@ -7,7 +7,7 @@ export default function Button(props) {
 
   return (
     <div className={marginClassName}>
-        <button className='button'>{name}</button>
+        <button className='button' onClick={props.onConfirm}>{name}</button>
     </div>
   )
 }
