@@ -28,6 +28,8 @@ export const AuthContextProvider = (props) => {
   const logoutHandler = (token, userId) => {
     setToken(null)
     setUserId(null)
+    localStorage.removeItem("token")
+    localStorage.removeItem("userId")
   }
 
   //Si l'utilisateur est connecté, il y a donc un token valide

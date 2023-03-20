@@ -10,9 +10,16 @@
         height: 60px;
         border-top-right-radius: $radius;
         border-top-left-radius: $radius;
-
+        position: relative;
+        bottom: 19px;
     }
     &__body{
-
+        text-align: center;
+        position: relative;
+        top: 100px;
+    }
+    &__button{
+        position: relative;
+        top: 100px;
     }
 }

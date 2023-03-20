@@ -15,7 +15,7 @@ export default function Modal(props) {
             <h2>{body}</h2>
         </div>
 
-        <Button name="ok" onConfirm={props.onConfirm}/>
+        <Button name="ok" onConfirm={props.onConfirm} marginClassName="modal__button"/>
     </div>
   )
 }
